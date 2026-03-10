@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alnikers – Accesorios con amor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#inicio" class="logo">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="14" cy="14" r="4" fill="#FF6B9D"/>
+          <ellipse cx="14" cy="6" rx="3" ry="5" fill="#FFB3C6"/>
+          <ellipse cx="14" cy="22" rx="3" ry="5" fill="#FFB3C6"/>
+          <ellipse cx="6" cy="14" rx="5" ry="3" fill="#FFD6E0"/>
+          <ellipse cx="22" cy="14" rx="5" ry="3" fill="#FFD6E0"/>
+          <ellipse cx="8.5" cy="8.5" rx="3" ry="4.5" transform="rotate(-45 8.5 8.5)" fill="#FFB3C6"/>
+          <ellipse cx="19.5" cy="19.5" rx="3" ry="4.5" transform="rotate(-45 19.5 19.5)" fill="#FFB3C6"/>
+          <ellipse cx="19.5" cy="8.5" rx="3" ry="4.5" transform="rotate(45 19.5 8.5)" fill="#FFD6E0"/>
+          <ellipse cx="8.5" cy="19.5" rx="3" ry="4.5" transform="rotate(45 8.5 19.5)" fill="#FFD6E0"/>
+        </svg>
+        <span>Alnikers</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#inicio" class="nav-link">Inicio</a>
+        <a href="#categorias" class="nav-link">Categorías</a>
+        <a href="#productos" class="nav-link">Productos</a>
+        <a href="#nosotras" class="nav-link">Nosotras</a>
+        <a href="#contacto" class="nav-link">Contacto</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="cart-btn" id="cartBtn" aria-label="Abrir carrito">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+          </svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="inicio">
+    <div class="hero-decoration hero-circle-1"></div>
+    <div class="hero-decoration hero-circle-2"></div>
+    <div class="hero-decoration hero-circle-3"></div>
+    <div class="container hero-content">
+      <p class="hero-pretitle">✦ Nueva colección 2024 ✦</p>
+      <h1 class="hero-title">Tu estilo,<br/><em>tu esencia</em></h1>
+      <p class="hero-subtitle">Accesorios únicos hechos con amor para mujeres que brillan con luz propia.</p>
+      <div class="hero-actions">
+        <a href="#productos" class="btn btn-primary">Ver colección</a>
+        <a href="#nosotras" class="btn btn-outline">Conocé Alnikers</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CATEGORÍAS ===== -->
+  <section class="section" id="categorias">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-pretitle">Explorá</p>
+        <h2 class="section-title">Nuestras categorías</h2>
+      </div>
+      <div class="categories-grid">
+        <button class="category-card" data-filter="aritos">
+          <div class="category-icon">💎</div>
+          <h3>Aritos</h3>
+          <p>Desde delicados hasta llamativos</p>
+        </button>
+        <button class="category-card" data-filter="pulseras">
+          <div class="category-icon">✨</div>
+          <h3>Pulseras</h3>
+          <p>Para apilar y combinar</p>
+        </button>
+        <button class="category-card" data-filter="collares">
+          <div class="category-icon">💝</div>
+          <h3>Collares</h3>
+          <p>El toque final perfecto</p>
+        </button>
+        <button class="category-card" data-filter="anillos">
+          <div class="category-icon">🌸</div>
+          <h3>Anillos</h3>
+          <p>Delicados y ajustables</p>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRODUCTOS ===== -->
+  <section class="section section-soft" id="productos">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-pretitle">Colección</p>
+        <h2 class="section-title">Productos destacados</h2>
+      </div>
+
+      <!-- Filtros -->
+      <div class="filter-bar" role="group" aria-label="Filtrar por categoría">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="aritos">Aritos</button>
+        <button class="filter-btn" data-filter="pulseras">Pulseras</button>
+        <button class="filter-btn" data-filter="collares">Collares</button>
+        <button class="filter-btn" data-filter="anillos">Anillos</button>
+      </div>
+
+      <!-- Grid de productos (generado por JS) -->
+      <div class="products-grid" id="productsGrid"></div>
+    </div>
+  </section>
+
+  <!-- ===== NOSOTRAS ===== -->
+  <section class="section" id="nosotras">
+    <div class="container about-inner">
+      <div class="about-text">
+        <p class="section-pretitle">Nuestra historia</p>
+        <h2 class="section-title">Nacimos del amor por los detalles</h2>
+        <p class="about-desc">Alnikers nació de un sueño: crear accesorios que cuenten historias. Cada pieza es diseñada con cuidado, pensando en mujeres que buscan expresarse a través de su estilo. Trabajamos con materiales de calidad para que puedas brillar cada día.</p>
+        <a href="#productos" class="btn btn-primary">Ver colección</a>
+      </div>
+      <div class="about-values">
+        <div class="value-card">
+          <div class="value-icon">🤍</div>
+          <h4>Hecho con amor</h4>
+          <p>Cada detalle importa. Diseñamos con pasión y dedicación.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">⭐</div>
+          <h4>Calidad premium</h4>
+          <p>Materiales cuidadosamente seleccionados para que duren.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">📦</div>
+          <h4>Envíos a todo el país</h4>
+          <p>Llegamos a cada rincón de Argentina con amor.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACTO / FOOTER ===== -->
+  <footer class="footer" id="contacto">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#inicio" class="logo logo-light">
+          <svg width="24" height="24" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="14" cy="14" r="4" fill="#FF6B9D"/>
+            <ellipse cx="14" cy="6" rx="3" ry="5" fill="rgba(255,255,255,0.8)"/>
+            <ellipse cx="14" cy="22" rx="3" ry="5" fill="rgba(255,255,255,0.8)"/>
+            <ellipse cx="6" cy="14" rx="5" ry="3" fill="rgba(255,255,255,0.6)"/>
+            <ellipse cx="22" cy="14" rx="5" ry="3" fill="rgba(255,255,255,0.6)"/>
+            <ellipse cx="8.5" cy="8.5" rx="3" ry="4.5" transform="rotate(-45 8.5 8.5)" fill="rgba(255,255,255,0.7)"/>
+            <ellipse cx="19.5" cy="19.5" rx="3" ry="4.5" transform="rotate(-45 19.5 19.5)" fill="rgba(255,255,255,0.7)"/>
+            <ellipse cx="19.5" cy="8.5" rx="3" ry="4.5" transform="rotate(45 19.5 8.5)" fill="rgba(255,255,255,0.6)"/>
+            <ellipse cx="8.5" cy="19.5" rx="3" ry="4.5" transform="rotate(45 8.5 19.5)" fill="rgba(255,255,255,0.6)"/>
+          </svg>
+          <span>Alnikers</span>
+        </a>
+        <p class="footer-tagline">Accesorios únicos hechos con amor ✿</p>
+        <div class="social-links">
+          <!-- Instagram -->
+          <a href="#" class="social-link" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+          </a>
+          <!-- TikTok -->
+          <a href="#" class="social-link" aria-label="TikTok">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.3 6.3 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.79a8.18 8.18 0 004.79 1.52V6.87a4.85 4.85 0 01-1.02-.18z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h5>Navegación</h5>
+        <a href="#inicio">Inicio</a>
+        <a href="#categorias">Categorías</a>
+        <a href="#productos">Productos</a>
+        <a href="#nosotras">Nosotras</a>
+      </div>
+      <div class="footer-links">
+        <h5>Info</h5>
+        <a href="#">Envíos y devoluciones</a>
+        <a href="#">Preguntas frecuentes</a>
+        <a href="#">Cuidado de accesorios</a>
+        <a href="#">Mayoristas</a>
+      </div>
+      <div class="footer-contact">
+        <h5>Contacto</h5>
+        <p>📧 hola@alnikers.com</p>
+        <p>📍 Argentina</p>
+        <p>🕐 Lun–Vie 9 a 18 hs</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Alnikers. Todos los derechos reservados. Hecho con 💕 en Argentina.</p>
+    </div>
+  </footer>
+
+  <!-- ===== DRAWER CARRITO ===== -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Carrito de compras">
+    <div class="cart-drawer-header">
+      <h3>Mi carrito 🛍️</h3>
+      <button class="close-cart" id="closeCart" aria-label="Cerrar carrito">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer" id="cartFooter">
+      <div class="cart-total">
+        <span>Total:</span>
+        <span id="cartTotal">$0</span>
+      </div>
+      <button class="btn btn-primary btn-full">Finalizar compra</button>
+    </div>
+  </aside>
+
+  <!-- Toast de notificación -->
+  <div class="toast" id="toast"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
